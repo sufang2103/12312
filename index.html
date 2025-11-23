@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敏捷思維研討會 線上報名</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 使用 Inter 和 Noto Sans TC 確保中英文字體美觀 */
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            background-color: #f7fafc; /* 淺灰色背景 */
+        }
+        /* 針對必填欄位使用 Tailwind utilities 樣式 */
+        .required-label::after {
+            content: '*';
+            color: #ef4444; /* red-500 */
+            margin-left: 4px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#06b6d4', // cyan-500, for fresh feel
+                        'secondary': '#f0f9ff', // sky-50, very light blue
+                        'accent': '#10b981', // emerald-500, for success/buttons
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center p-4">
+
+    <!-- 主容器 -->
+    <div class="w-full max-w-6xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden mb-8">
+        
+        <!-- 頂部標題區塊 -->
+        <header class="bg-primary text-white p-6 md:p-10 rounded-t-xl text-center">
+            <h2 class="text-xl md:text-2xl font-light mb-1 opacity-90">敏捷思維導入教學行政</h2>
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+                Hello World 2025 開發者大會心得分享暨實務研討會
+            </h1>
+        </header>
+
+        <!-- 主要內容區塊：活動資訊 (左) 與 報名表單 (右) -->
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-0">
+            
+            <!-- 活動資訊區塊 (左側，明亮藍色背景) -->
+            <div class="md:col-span-1 bg-secondary p-8 space-y-6">
+                <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">活動資訊</h2>
+                
+                <!-- 目的 -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-700 mb-2 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 7l2-2 3-3m0 0l3.05 3.05M17 7l-2 2-3 3-2 2-2-2-3-3m0 0l-3.05-3.05"></path></svg>
+                        研討會目的
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        分享「敏捷開發 (Agile)」的核心精神，並共同探討如何將其應用於教學部的日常行政、專案管理 (如 QCC、OSCE 籌備) 中，以提升團隊效率與應變能力。
+                    </p>
+                </div>
+
+                <!-- 日期時間地點 -->
+                <div class="space-y-3">
+                    <div class="flex items-center text-gray-800">
+                        <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium mr-2">日期：</span>
+                        <span>2025 年 10 月 31 日 (五)</span>
+                    </div>
+                    <div class="flex items-center text-gray-800">
+                        <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium mr-2">時間：</span>
+                        <span>14:00 - 15:30 (共 1.5 小時)</span>
+                    </div>
+                    <div class="flex items-center text-gray-800">
+                        <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243m11.314 0a9 9 0 11-16 0 9 9 0 0116 0z"></path></svg>
+                        <span class="font-medium mr-2">地點：</span>
+                        <span>教學部會議室</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 報名表單區塊 (右側，白色背景) -->
+            <div class="md:col-span-2 p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">線上報名</h2>
+                
+                <!-- 狀態訊息顯示區 -->
+                <div id="statusMessage" class="hidden p-3 mb-4 rounded-lg font-medium" role="alert"></div>
+
+                <form id="registrationForm" class="space-y-6">
+                    
+                    <!-- 姓名 -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 required-label">姓名</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary transition duration-150 ease-in-out"
+                            placeholder="請輸入您的姓名">
+                    </div>
+
+                    <!-- 電子郵件 (Email) -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 required-label">電子郵件 (Email)</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary transition duration-150 ease-in-out"
+                            placeholder="請輸入您的Email (例如: user@example.com)">
+                    </div>
+
+                    <!-- 職稱 (必填) -->
+                    <div>
+                        <label for="title" class="block text-sm font-medium text-gray-700 required-label">職稱</label>
+                        <select id="title" name="title" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary transition duration-150 ease-in-out">
+                            <option value="" disabled selected>-- 請選擇您的職稱 --</option>
+                            <option value="醫師">醫師</option>
+                            <option value="護理師">護理師</option>
+                            <option value="醫事人員">醫事人員</option>
+                            <option value="行政人員">行政人員</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+
+                    <!-- 是否需要茶水點心？ -->
+                    <fieldset>
+                        <legend class="text-sm font-medium text-gray-700 required-label">是否需要茶水點心？</legend>
+                        <div class="mt-2 space-y-2 flex gap-6">
+                            <div class="flex items-center">
+                                <input id="snack-yes" name="snack" type="radio" value="是" checked
+                                    class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
+                                <label for="snack-yes" class="ml-3 block text-sm font-medium text-gray-700">是</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="snack-no" name="snack" type="radio" value="否"
+                                    class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
+                                <label for="snack-no" class="ml-3 block text-sm font-medium text-gray-700">否</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- 會前提問 (多行文字輸入框) -->
+                    <div>
+                        <label for="pre_question" class="block text-sm font-medium text-gray-700">會前提問 (選填)</label>
+                        <textarea id="pre_question" name="pre_question" rows="4"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary transition duration-150 ease-in-out"
+                            placeholder="您目前在行政工作上遇到的困難？或最想了解關於「敏捷」的哪個部分？"></textarea>
+                    </div>
+
+                    <!-- 確認報名按鈕 -->
+                    <div>
+                        <button type="submit" id="submitButton"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-accent hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition duration-300 ease-in-out transform hover:scale-[1.01] disabled:opacity-50">
+                            確認報名
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- 頁尾區塊 -->
+        <footer class="bg-gray-100 p-6 text-center text-sm text-gray-500 rounded-b-xl">
+            <p>主辦單位：教學部 | 聯絡人：盧英云 (分機57425)</p>
+            <p class="mt-1">
+                <span class="font-medium text-red-500 mr-1">注意：</span>
+                本報名資料僅供本次研討會聯繫與餐點統計使用。
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registrationForm');
+            const statusMessage = document.getElementById('statusMessage');
+            const submitButton = document.getElementById('submitButton');
+
+            // ⚠️ 請將此處替換為您的 Apps Script 網頁應用程式網址 ⚠️
+            // 格式範例: https://script.google.com/macros/s/AKfycbx.../exec
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkGuvc13J8N_MJWKMKOjaqWQnOkLOeVrYZ-KW3qHdK3RXoqxnJ7aX0prKXrvM5CuS6QQ/exec'; 
+
+            // 顯示狀態訊息 (成功/失敗)
+            function showStatus(message, type = 'success') {
+                statusMessage.textContent = message;
+                statusMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+                if (type === 'success') {
+                    statusMessage.classList.add('bg-green-100', 'text-green-700');
+                } else {
+                    statusMessage.classList.add('bg-red-100', 'text-red-700');
+                }
+                statusMessage.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // 處理表單提交
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                submitButton.disabled = true;
+                submitButton.innerText = '資料傳送中...'; // 更改按鈕文字提示使用者
+                statusMessage.classList.add('hidden'); // 隱藏舊訊息
+
+                // 簡易前端驗證
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const title = document.getElementById('title').value;
+
+                if (!name || !email || !title) {
+                    showStatus('報名失敗：姓名、電子郵件和職稱均為必填欄位，請檢查。', 'error');
+                    submitButton.disabled = false;
+                    submitButton.innerText = '確認報名';
+                    return;
+                }
+                
+                // 檢查是否已設定 URL
+                if (SCRIPT_URL === 'YOUR_WEB_APP_URL_HERE' || SCRIPT_URL === '') {
+                     showStatus('系統設定錯誤：尚未設定後端 Apps Script 網址，請聯絡管理員。', 'error');
+                     submitButton.disabled = false;
+                     submitButton.innerText = '確認報名';
+                     return;
+                }
+
+                // 收集表單資料
+                const formData = {
+                    name: name,
+                    email: email,
+                    title: title,
+                    snack: document.querySelector('input[name="snack"]:checked').value,
+                    pre_question: document.getElementById('pre_question').value.trim(),
+                };
+
+                try {
+                    // 使用 fetch 發送 POST 請求
+                    // mode: 'no-cors' 是關鍵，解決跨網域問題
+                    // 注意：使用 no-cors 時，我們無法讀取回應的具體內容 (response.json())
+                    // 但只要程式沒報錯，通常代表資料已成功送出
+                    await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors', 
+                        cache: 'no-cache',
+                        headers: {
+                            'Content-Type': 'text/plain;charset=utf-8', // 使用 text/plain 避免觸發 OPTIONS 預檢
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // 成功
+                    showStatus('🎉 報名成功！感謝您的參與，資料已匯入系統。', 'success');
+                    form.reset(); 
+
+                } catch (error) {
+                    console.error('提交錯誤:', error);
+                    showStatus('報名失敗：連線發生問題，請稍後再試或聯絡主辦單位。', 'error');
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.innerText = '確認報名';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
